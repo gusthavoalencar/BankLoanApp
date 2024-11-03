@@ -1,0 +1,9 @@
+<h1>Users#create</h1>
+<%= simple_form_for @user do |f| %>
+  <%= f.input :firstName, label: 'First Name' %>
+  <%= f.input :lastName, label: 'Last Name' %>
+  <%= f.input :email, label: 'Email' %>
+  <%= f.input :phoneNumber, label: 'Phone Number' %>
+
+  <%= f.button :submit, 'Create User' %>
+<% end %>
