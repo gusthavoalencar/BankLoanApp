@@ -66,5 +66,7 @@ group :test do
   gem "selenium-webdriver"
 end
 
-
+#gem "font-awesome-rails"
+gem "font-awesome-sass"
+gem 'sassc'
 gem 'simple_form'
