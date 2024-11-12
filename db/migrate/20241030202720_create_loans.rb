@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CreateLoans < ActiveRecord::Migration[7.1]
+class CreateLoans < ActiveRecord::Migration[7.1] # rubocop:todo Style/Documentation
   def change
     create_table :loans do |t|
       t.decimal :amount
