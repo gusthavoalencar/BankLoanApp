@@ -67,7 +67,14 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: bank_loan_app_test
+  adapter: postgresql
+  encoding: unicode
+  database: bankLoanAppDB
+  username: postgres
+  password: pass123
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: 127.0.0.1
+  port: 5432
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
