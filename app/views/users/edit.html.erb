@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold">Edit User</h1>
+        <%= link_to 'Back to Users', users_path, class: 'btn btn-secondary' %>
+    </div>
+
+  <%= simple_form_for(@user, html: { class: 'p-4 border rounded shadow-sm bg-light' }) do |f| %>
+    <div class="mb-3">
+      <%= f.input :firstName, label: "First Name", input_html: { class: 'form-control' }, required: true, label_html: { class: 'form-label' } %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.input :lastName, label: "Last Name", input_html: { class: 'form-control' }, required: true, label_html: { class: 'form-label' } %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.input :email, label: "Email", as: :email, input_html: { class: 'form-control' }, required: true, label_html: { class: 'form-label' } %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.input :phoneNumber, label: "Phone Number", as: :tel, input_html: { class: 'form-control' }, required: true, label_html: { class: 'form-label' } %>
+    </div>
+
+    <div class="d-flex justify-content-end">
+      <%= f.button :submit, "Save Changes", class: "btn btn-primary mx-2" %>
+      <%= link_to "Cancel", user_path(@user), class: "btn btn-secondary" %>
+    </div>
+  <% end %>
+</div>

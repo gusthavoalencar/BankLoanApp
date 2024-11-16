@@ -1,15 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'loans/new'
-  get 'loans/create'
-  get 'loans/index'
-  get 'loans/show'
-  get 'users/new'
-  get 'users/create'
-  get 'users/index'
-  get 'users/show'
-  resources :users, only: %i[new create show]
+  resources :loans, only: %i[new create show index edit update destroy]
+  resources :users, only: %i[new create show index edit update destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

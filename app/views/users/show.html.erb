@@ -1,18 +1,33 @@
-<div class="container">
-    <p>
-    <strong>First Name:</strong>
-    <%= @user.firstName %>
-    </p>
-    <p>
-    <strong>Last Name:</strong>
-    <%= @user.lastName %>
-    </p>
-    <p>
-    <strong>Email:</strong>
-    <%= @user.email %>
-    </p>
-    <p>
-    <strong>Phone Number:</strong>
-    <%= @user.phoneNumber %>
-    </p>
+<div class="container mt-5">
+  <h1 class="fw-bold mb-4">User Details</h1>
+
+  <div class="p-4 border rounded shadow-sm bg-light">
+    <div class="mb-3">
+      <label class="form-label fw-bold">First Name:</label>
+      <div class="form-control-plaintext"><%= @user.firstName %></div>
+    </div>
+    <hr>
+
+    <div class="mb-3">
+      <label class="form-label fw-bold">Last Name:</label>
+      <div class="form-control-plaintext"><%= @user.lastName %></div>
+    </div>
+    <hr>
+
+    <div class="mb-3">
+      <label class="form-label fw-bold">Email:</label>
+      <div class="form-control-plaintext"><%= @user.email %></div>
+    </div>
+    <hr>
+
+    <div class="mb-3">
+      <label class="form-label fw-bold">Phone Number:</label>
+      <div class="form-control-plaintext"><%= @user.phoneNumber %></div>
+    </div>
+
+    <div class="d-flex justify-content-end gap-2 mt-4">
+      <%= link_to 'Edit', edit_user_path(@user), class: 'btn btn-primary' %>
+      <%= link_to 'Back to Users', users_path, class: 'btn btn-secondary' %>
+    </div>
+  </div>
 </div>
