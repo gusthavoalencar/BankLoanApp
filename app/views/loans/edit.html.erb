@@ -1,0 +1,23 @@
+<div class="container mt-5 mb-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="fw-bold">Edit Loan</h1>
+    <%= link_to 'Back to Loans', loans_path, class: 'btn btn-secondary' %>
+  </div>
+    <%= simple_form_for(@loan, html: { class: 'p-4 border rounded shadow-sm bg-light' }) do |f| %>
+      <div class="mb-3">
+        <%= f.input :amount, label: 'Loan Amount', input_html: { class: 'form-control' }, label_html: { class: 'form-label fw-bold' } %>
+      </div>
+      <div class="mb-3">
+        <%= f.input :interest_rate, label: 'Interest Rate (%)', input_html: { class: 'form-control' }, label_html: { class: 'form-label fw-bold' } %>
+      </div>
+      <div class="mb-3">
+        <%= f.input :status, label: 'Status', collection: ['Pending', 'Approved', 'Rejected', 'Completed'], input_html: { class: 'form-select' }, label_html: { class: 'form-label fw-bold' } %>
+      </div>
+      <div class="mb-3">
+        <%= f.input :user_id, label: 'User', collection: User.all.collect { |u| [u.firstName + ' ' + u.lastName, u.id] }, input_html: { class: 'form-select', disabled: true }, label_html: { class: 'form-label fw-bold' } %>
+      </div>
+      <div class="d-flex justify-content-end">
+        <%= f.button :submit, 'Update Loan', class: 'btn btn-success' %>
+      </div>
+    <% end %>
+</div>
