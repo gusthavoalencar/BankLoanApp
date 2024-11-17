@@ -44,5 +44,4 @@ class LoansController < ApplicationController
     @loan.destroy
     redirect_to loans_path, notice: 'Loan was successfully deleted.'
   end
-
 end
