@@ -1,2 +1,44 @@
-<h1>Loans#index</h1>
-<p>Find me in app/views/loans/index.html.erb</p>
+<div class="container mt-5 mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold">Loans</h1>
+        <%= link_to 'Create Loan', new_loan_path, class: 'btn btn-success' %>
+    </div>
+    <div class="table-responsive rounded-top">
+        <table class="table table-hover table-bordered">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Interest Rate</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">User</th>
+                    <th scope="col" class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if @loans.any? %>
+                    <% @loans.each do |loan| %>
+                        <tr>
+                            <td><%= loan.amount %></td>
+                            <td><%= loan.interest_rate %></td>
+                            <td><%= loan.status %></td>
+                            <td><%= loan.user.firstName + ' ' + loan.user.lastName %></td>
+                            <td class="text-center">
+                                <div class="d-inline-flex gap-2">
+                                    <%= link_to 'Show', loan_path(loan), class: 'btn btn-secondary btn-sm' %>
+                                    <%= link_to 'Edit', edit_loan_path(loan), class: 'btn btn-primary btn-sm' %>
+                                    <%= form_with(url: loan_path(loan), method: :delete, class: 'd-inline') do %>
+                                        <%= submit_tag 'Delete', class: 'btn btn-danger btn-sm' %>
+                                    <% end %>
+                                </div>
+                            </td>
+                        </tr>
+                    <% end %>
+                <% else %>
+                    <tr>
+                        <td colspan="5" class="text-center">No loans found</td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>

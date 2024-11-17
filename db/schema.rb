@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.1].define(version: 20_241_030_202_720) do
   create_table 'loans', force: :cascade do |t|
     t.decimal 'amount'
     t.string 'status'
+    t.decimal 'interest_rate'
     t.bigint 'user_id', null: false
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
