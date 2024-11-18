@@ -77,3 +77,4 @@ end
 gem 'font-awesome-sass'
 gem 'sassc'
 gem 'simple_form'
+gem 'chartkick'
