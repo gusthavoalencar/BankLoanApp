@@ -1,4 +1,3 @@
-require 'test_helper' # rubocop:todo Layout/EndOfLine
-
+require 'test_helper'
 class PagesControllerTest < ActionDispatch::IntegrationTest
 end
