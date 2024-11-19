@@ -15,7 +15,9 @@ SimpleForm.setup do |config|
   # stack. The options given below are used to wrap the
   # whole input.
   config.wrappers :default, class: :input,
+                            # rubocop:todo Layout/LineLength
                             hint_class: :field_with_hint, error_class: :field_with_errors, valid_class: :field_without_errors do |b|
+    # rubocop:enable Layout/LineLength
     ## Extensions enabled by default
     # Any of these extensions can be disabled for a
     # given input by passing: `f.input EXTENSION_NAME => false`.

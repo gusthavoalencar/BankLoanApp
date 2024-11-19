@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# frozen_string_literal: true # rubocop:todo Layout/EndOfLine
 
 Rails.application.routes.draw do
   root 'pages#home'
