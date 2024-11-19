@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  root 'pages#home'
   resources :loans, only: %i[new create show index edit update destroy]
   resources :users, only: %i[new create show index edit update destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

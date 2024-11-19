@@ -74,6 +74,7 @@ group :test do
 end
 
 # gem "font-awesome-rails"
+gem 'chartkick'
 gem 'font-awesome-sass'
 gem 'sassc'
 gem 'simple_form'

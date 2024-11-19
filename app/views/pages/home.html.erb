@@ -1,0 +1,25 @@
+<div class="container mt-5 mb-5">
+    <h1 class="fw-bold mb-4">Overview</h1>    
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Loans by Status</h5>
+                    <%= pie_chart @loans_by_status, height: "300px", library: { title: { text: "Loans by Status", display: true } } %>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Total Loan Amount by Status</h5>
+                    <%= column_chart @total_amount_by_status, height: "300px", library: { title: { text: "Total Loan Amount by Status", display: true } } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="alert text-center py-1">
+        <p class="mb-0">Total Loans: <strong><%= Loan.count %></strong> | Total Loan Amount: <strong>$<%= Loan.sum(:amount) %></strong></p>
+    </div>
+</div>

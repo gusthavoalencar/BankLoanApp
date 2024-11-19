@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class LoansController < ApplicationController
+class LoansController < ApplicationController # rubocop:todo Style/Documentation
   def new
     @loan = Loan.new
   end
