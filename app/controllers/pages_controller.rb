@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # rubocop:todo Style/Documentation
 class PagesController < ApplicationController # rubocop:todo Style/Documentation
   # rubocop:enable Style/Documentation
