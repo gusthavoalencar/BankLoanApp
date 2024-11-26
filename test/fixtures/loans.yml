@@ -1,11 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  amount: 9.99
-  status: MyString
+  amount: 5000
+  interest_rate: 10
+  status: Pending
   user: one
-
-two:
-  amount: 9.99
-  status: MyString
-  user: two

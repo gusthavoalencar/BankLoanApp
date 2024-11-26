@@ -69,7 +69,7 @@ test:
   <<: *default
   adapter: postgresql
   encoding: unicode
-  database: bankLoanAppDB
+  database: bankLoanAppDBTestEnv
   username: postgres
   password: pass123
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
