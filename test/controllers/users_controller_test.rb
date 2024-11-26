@@ -29,7 +29,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
           firstName: 'TestUserOneFirstName',
           lastName: 'TestUserOneLastName',
           email: 'testuseroneemail@gmail.com',
-          phoneNumber: 123123123
+          phoneNumber: 123_123_123
         }
       }
     end

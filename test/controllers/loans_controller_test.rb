@@ -19,14 +19,13 @@ class LoansControllerTest < ActionDispatch::IntegrationTest
   test 'should get new' do
     get new_loan_url
     assert_response :success
-
   end
 
   test 'should create loan' do
     assert_difference('Loan.count', 1) do
       post loans_url, params: {
         loan: {
-          amount: 10000,
+          amount: 10_000,
           interest_rate: 12,
           status: 'Pending',
           user_id: @user.id
@@ -48,13 +47,12 @@ class LoansControllerTest < ActionDispatch::IntegrationTest
   test 'should get edit' do
     get edit_loan_url(@loan)
     assert_response :success
-
   end
 
   test 'should update loan' do
     patch loan_url(@loan), params: {
       loan: {
-        amount: 15000,
+        amount: 15_000,
         interest_rate: 10,
         status: 'Approved'
       }
